@@ -1,23 +1,49 @@
-iRequirements
+# 0x11. C - printf - By Angy & Leader  of ALX
+A collaborative project by ALX Software Engineering to implement the inbuilt `printf` function in c from scratch.
 
-General
 
-Allowed editors: vi, vim, emacs
-All your files will be compiled on Ubuntu 20.04 LTS using gcc, using the
-options -Wall -Werror -Wextra -pedantic -std=gnu89
-All your files should end with a new line
-A README.md file, at the root of the folder of the project is mandatory
-Your code should use the Betty style. It will be checked using betty-style.pl
-and betty-doc.pl
-You are not allowed to use global variables
-No more than 5 functions per file
-In the following examples, the main.c files are shown as examples. You can
-use them to test your functions, but you don’t have to push them to your repo
-(if you do we won’t take them into account). We will use our own
-main.c files at compilation. Our main.c files might be different from the one
-shown in the examples
-The prototypes of all your functions should be included in your header file
-called main.h
-Don’t forget to push your header file
-All your header files should be include guarded
-Note that we will not provide the _putchar function for this project
+## Table of Contents
+<!-- toc -->
+
+- [0x11. C - printf - By Angy \& Leader  of ALX](#0x11-c---printf---by-angy--leader--of-alx)
+  - [Table of Contents](#table-of-contents)
+- [Files](#files)
+- [Change Log](#change-log)
+  - [Version 1.0](#version-10)
+- [Authors](#authors)
+
+<!-- tocstop -->
+# Files
+
+|          Goto          | Files                                          | Description                                                  |
+| :--------------------: | :--------------------------------------------- | ------------------------------------------------------------ |
+|      [📌](#_printf)      | [_printf.c](./printf.c)                         | Entry point for the `_printf`.                                |
+|      [📌](#_putchar)      | [_putchar.c](./_putchar.c)                         | Custom implementation of the inbuilt `putchar`.                                |
+|   [📌](#main)    | [main.c](./main.c)                 | Tests for `_printf` program.       |
+|   [📌](#main.h)    | [main.h](./main.h)                 | Header file containing all prototypes for `_printf` program.                    |
+|   [📌](#man_3_printf)   | [man_3_printf](./man_3_printf)               | The man page for  `_printf` program.                   |
+| [📌](#printf_binary)  | [printf_binary.c](./printf_binary.c)         | Contains code that prints binary represetation using `%b`. |
+| [📌](#printf_char)  | [printf_char.c](./printf_char.c)         | Contains code that prints a single character using `%c`. |
+| [📌](#printf_hex)  | [printf_hex.c](./printf_hex.c)         | Contains code that prints hexadecimal represetation using `%x` and `%X`.|
+| [📌](#printf_integer)  | [printf_integer.c](./printf_integer.c)         | Contains code that prints an integer using `%d` and `%i`. |
+| [📌](#printf_octal)  | [printf_octal.c](./printf_octal.c)         | Contains code that prints octal represetation using `%o`. |
+| [📌](#printf_pointer)  | [printf_pointer.c](./printf_pointer.c)         | Contains code that prints a pointer using `%p`. |
+| [📌](#printf_reverse)  | [printf_reverse.c](./printf_reverse.c)         | Contains code that prints in reverse using `%r`. |
+| [📌](#printf_string)  | [printf_string.c](./printf_string.c)         | Contains code that prints a string suing `%s`. |
+| [📌](#printf_unsigned)  | [printf_unsigned.c](./printf_unsigned.c)         | Contains code that prints an unsigned integer using `%u`. |
+| [📌](#switch)  | [switch.c](./switch.c)         | Contains code that selects appropriate handler. |
+
+
+# Change Log
+
+## Version 1.0
+- Released version 1.0
+- All code is betty compliant
+- The manual page is present
+
+
+
+# Authors
+
+- Angy - [Github](http://github.com/angy) 
+- Mushio Leader - [Github](https://github.com/malo-dev),[Twitter](https://twitter.com/leader mushio)
