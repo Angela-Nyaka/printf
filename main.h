@@ -1,50 +1,56 @@
 #ifndef MAIN_H
 #define MAIN_H
 
+#include <stdio.h>
 #include <unistd.h>
 #include <stdlib.h>
 #include <stdarg.h>
+#include <limits.h>
 
-/* utils.c */
-int _strlen(const char *);
-int print(char *);
-char *itoa(long int, int);
-
-/* printf.c */
-int _printf(const char *, ...);
-
-/* handler.c */
-int handler(const char *, va_list);
-int percent_handler(const char *, va_list, int *);
-
-/* printers */
-int print_string(va_list);
-int print_char(va_list);
-int print_integer(va_list);
-int print_binary(va_list);
-int print_rot(va_list);
-int print_unsigned(va_list);
-int print_octal(va_list);
-int print_hexadecimal_low(va_list);
-int print_hexadecimal_upp(va_list);
-int print_pointer(va_list);
-int print_rev_string(va_list);
-
-/* _putchar.c */
-int _putchar(char);
-int buffer(char);
+#define NULL_STRING "(null)"
+#define NUL '\0'
 
 /**
- * struct _format - Typedef struct
+ * struct convert - defines a structure for symbols and functions
  *
- * @type: Format
+ * @sym: The operator
  * @f: The function associated
- **/
-typedef struct _format
+ */
+
+struct convert
 {
-	char type;
+	char *sym;
 	int (*f)(va_list);
-} format;
+};
+typedef struct convert conver_t;
 
 
-#endif /* MAIN_H */
+int _printf(const char *format, ...);
+int _putchar(char c);
+int format_reciever(const char *format, conver_t f_list[], va_list arg_list);
+int print_percent(va_list);
+int print_integer(va_list);
+int print_char(va_list);
+int print_string(va_list);
+int print_binary(va_list);
+int print_unsigned_integer(va_list);
+int print_octal(va_list list);
+int print_hex(va_list list);
+int print_HEX(va_list list);
+int print_String(va_list val);
+int print_pointer(va_list val);
+int print_rev(va_list l);
+int print_rot13(va_list list);
+
+int print_number(va_list args);
+unsigned int base_len(unsigned int, int);
+char *rev_string(char *);
+void write_base(char *str);
+char *_memcpy(char *dest, char *src, unsigned int n);
+int print_unsgined_number(unsigned int n);
+int hex_check(int num, char x);
+int print_hex_aux(unsigned long int num);
+int isNonAlphaNumeric(char c); 
+int _puts(char *str);
+char *convert(unsigned long int num, int base, int lowercase);
+#endif
